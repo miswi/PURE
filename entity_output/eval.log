@@ -1,0 +1,7 @@
+['E:/Code File/Pytorch/NLP/Paper code/Code Reconstr/PURE/run_entity.py']
+Namespace(bert_model_dir=None, bertadam=False, context_window=100, data_dir='./processed_data/json', dev_data='./processed_data/json\\dev.json', dev_pred_filename='ent_pred_dev.json', do_eval=False, do_train=False, eval_batch_size=12, eval_per_epoch=1, eval_test=False, learning_rate=1e-05, max_span_length=8, model='E:\\Code File\\Pre-train-Model\\torchVersion\\bert-base-uncased', num_epoch=30, output_dir='entity_output', print_loss_step=100, seed=0, task='scierc', task_learning_rate=0.0001, test_data='./processed_data/json\\test.json', test_pred_filename='ent_pred_test.json', train_batch_size=12, train_data='./processed_data/json\\train.json', train_shuffle=True, use_albert=False, warmup_proportion=0.1)
+Moving to cuda....
+ # CPUs = 1
+# Overlap: 0
+Extracted 275 samples from 50 documents, with 811 NER labels, 89.996 avg input length, 100 max length
+Max Length: 68, Max NER: 11

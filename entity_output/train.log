@@ -1,0 +1,288 @@
+['E:/Code File/Pytorch/NLP/Paper code/Code Reconstr/PURE/run_entity.py']
+Namespace(bert_model_dir=None, bertadam=False, context_window=100, data_dir='./processed_data/json', dev_data='./processed_data/json\\dev.json', dev_pred_filename='ent_pred_dev.json', do_eval=True, do_train=True, eval_batch_size=12, eval_per_epoch=1, eval_test=False, learning_rate=1e-05, max_span_length=8, model='E:\\Code File\\Pre-train-Model\\torchVersion\\bert-base-uncased', num_epoch=30, output_dir='entity_output', print_loss_step=100, seed=0, task='scierc', task_learning_rate=0.0001, test_data='./processed_data/json\\test.json', test_pred_filename='ent_pred_test.json', train_batch_size=12, train_data='./processed_data/json\\train.json', train_shuffle=True, use_albert=False, warmup_proportion=0.1)
+Moving to cuda....
+ # CPUs = 1
+# Overlap: 0
+Extracted 275 samples from 50 documents, with 811 NER labels, 89.996 avg input length, 100 max length
+Max Length: 68, Max NER: 11
+Long Sentence: {'doc_key': 'H91-1077', 'sentence_ix': 4} 101
+# Overlap: 0
+Extracted 1861 samples from 350 documents, with 5598 NER labels, 89.922 avg input length, 101 max length
+Max Length: 101, Max NER: 13
+Epoch = 0, iter = 99, loss= 314.18553
+Epoch: 0
+Evaluating
+Accuracy: 0.98187
+Cor: 0, Pred TOT: 0, Gold TOT: 811
+Precision: 0.00000, Recall: 0.00000, F1: 0.00000
+Used time: 10.198678
+Epoch = 1, iter = 43, loss= 98.54808
+Epoch = 1, iter = 143, loss= 21.22887
+Epoch: 1
+Evaluating
+Accuracy: 0.98187
+Cor: 0, Pred TOT: 0, Gold TOT: 811
+Precision: 0.00000, Recall: 0.00000, F1: 0.00000
+Used time: 10.677562
+Epoch = 2, iter = 87, loss= 19.00513
+Epoch: 2
+Evaluating
+Accuracy: 0.98187
+Cor: 0, Pred TOT: 0, Gold TOT: 811
+Precision: 0.00000, Recall: 0.00000, F1: 0.00000
+Used time: 10.462905
+Epoch = 3, iter = 31, loss= 15.28269
+Epoch = 3, iter = 131, loss= 12.91851
+Epoch: 3
+Evaluating
+Accuracy: 0.98187
+Cor: 0, Pred TOT: 0, Gold TOT: 811
+Precision: 0.00000, Recall: 0.00000, F1: 0.00000
+Used time: 10.455740
+Epoch = 4, iter = 75, loss= 10.56302
+Epoch: 4
+Evaluating
+Accuracy: 0.98471
+Cor: 218, Pred TOT: 500, Gold TOT: 811
+Precision: 0.43600, Recall: 0.26880, F1: 0.33257
+Used time: 10.968367
+----Best F1 in valid 33.26 in Epoch 4
+Saving to entity_output...
+Epoch = 5, iter = 19, loss= 8.75769
+Epoch = 5, iter = 119, loss= 8.12397
+Epoch: 5
+Evaluating
+Accuracy: 0.98559
+Cor: 219, Pred TOT: 404, Gold TOT: 811
+Precision: 0.54208, Recall: 0.27004, F1: 0.36049
+Used time: 10.777658
+----Best F1 in valid 36.05 in Epoch 5
+Saving to entity_output...
+Epoch = 6, iter = 63, loss= 7.44348
+Epoch: 6
+Evaluating
+Accuracy: 0.98628
+Cor: 283, Pred TOT: 554, Gold TOT: 811
+Precision: 0.51083, Recall: 0.34895, F1: 0.41465
+Used time: 10.314334
+----Best F1 in valid 41.47 in Epoch 6
+Saving to entity_output...
+Epoch = 7, iter = 7, loss= 6.87010
+Epoch = 7, iter = 107, loss= 6.26118
+Epoch: 7
+Evaluating
+Accuracy: 0.98684
+Cor: 356, Pred TOT: 687, Gold TOT: 811
+Precision: 0.51820, Recall: 0.43896, F1: 0.47530
+Used time: 10.568453
+----Best F1 in valid 47.53 in Epoch 7
+Saving to entity_output...
+Epoch = 8, iter = 51, loss= 5.71355
+Epoch = 8, iter = 151, loss= 5.59980
+Epoch: 8
+Evaluating
+Accuracy: 0.98673
+Cor: 386, Pred TOT: 783, Gold TOT: 811
+Precision: 0.49298, Recall: 0.47596, F1: 0.48432
+Used time: 11.139970
+----Best F1 in valid 48.43 in Epoch 8
+Saving to entity_output...
+Epoch = 9, iter = 95, loss= 5.02780
+Epoch: 9
+Evaluating
+Accuracy: 0.98759
+Cor: 412, Pred TOT: 759, Gold TOT: 811
+Precision: 0.54282, Recall: 0.50801, F1: 0.52484
+Used time: 11.090171
+----Best F1 in valid 52.48 in Epoch 9
+Saving to entity_output...
+Epoch = 10, iter = 39, loss= 4.75535
+Epoch = 10, iter = 139, loss= 4.43297
+Epoch: 10
+Evaluating
+Accuracy: 0.98774
+Cor: 436, Pred TOT: 792, Gold TOT: 811
+Precision: 0.55051, Recall: 0.53761, F1: 0.54398
+Used time: 10.768247
+----Best F1 in valid 54.40 in Epoch 10
+Saving to entity_output...
+Epoch = 11, iter = 83, loss= 4.14787
+Epoch: 11
+Evaluating
+Accuracy: 0.98750
+Cor: 425, Pred TOT: 794, Gold TOT: 811
+Precision: 0.53526, Recall: 0.52404, F1: 0.52960
+Used time: 10.983012
+Epoch = 12, iter = 27, loss= 3.75390
+Epoch = 12, iter = 127, loss= 3.77138
+Epoch: 12
+Evaluating
+Accuracy: 0.98828
+Cor: 456, Pred TOT: 795, Gold TOT: 811
+Precision: 0.57358, Recall: 0.56227, F1: 0.56787
+Used time: 10.783218
+----Best F1 in valid 56.79 in Epoch 12
+Saving to entity_output...
+Epoch = 13, iter = 71, loss= 3.68652
+Epoch: 13
+Evaluating
+Accuracy: 0.98849
+Cor: 457, Pred TOT: 778, Gold TOT: 811
+Precision: 0.58740, Recall: 0.56350, F1: 0.57520
+Used time: 10.889830
+----Best F1 in valid 57.52 in Epoch 13
+Saving to entity_output...
+Epoch = 14, iter = 15, loss= 3.24174
+Epoch = 14, iter = 115, loss= 3.03095
+Epoch: 14
+Evaluating
+Accuracy: 0.98855
+Cor: 477, Pred TOT: 812, Gold TOT: 811
+Precision: 0.58744, Recall: 0.58816, F1: 0.58780
+Used time: 10.783446
+----Best F1 in valid 58.78 in Epoch 14
+Saving to entity_output...
+Epoch = 15, iter = 59, loss= 2.85519
+Epoch: 15
+Evaluating
+Accuracy: 0.98873
+Cor: 473, Pred TOT: 785, Gold TOT: 811
+Precision: 0.60255, Recall: 0.58323, F1: 0.59273
+Used time: 10.920244
+----Best F1 in valid 59.27 in Epoch 15
+Saving to entity_output...
+Epoch = 16, iter = 3, loss= 2.77585
+Epoch = 16, iter = 103, loss= 2.53669
+Epoch: 16
+Evaluating
+Accuracy: 0.98909
+Cor: 507, Pred TOT: 817, Gold TOT: 811
+Precision: 0.62056, Recall: 0.62515, F1: 0.62285
+Used time: 11.029967
+----Best F1 in valid 62.29 in Epoch 16
+Saving to entity_output...
+Epoch = 17, iter = 47, loss= 2.44873
+Epoch = 17, iter = 147, loss= 2.37988
+Epoch: 17
+Evaluating
+Accuracy: 0.98921
+Cor: 516, Pred TOT: 831, Gold TOT: 811
+Precision: 0.62094, Recall: 0.63625, F1: 0.62850
+Used time: 10.896928
+----Best F1 in valid 62.85 in Epoch 17
+Saving to entity_output...
+Epoch = 18, iter = 91, loss= 2.16363
+Epoch: 18
+Evaluating
+Accuracy: 0.98968
+Cor: 516, Pred TOT: 798, Gold TOT: 811
+Precision: 0.64662, Recall: 0.63625, F1: 0.64139
+Used time: 10.422025
+----Best F1 in valid 64.14 in Epoch 18
+Saving to entity_output...
+Epoch = 19, iter = 35, loss= 2.25979
+Epoch = 19, iter = 135, loss= 1.96856
+Epoch: 19
+Evaluating
+Accuracy: 0.98943
+Cor: 515, Pred TOT: 813, Gold TOT: 811
+Precision: 0.63346, Recall: 0.63502, F1: 0.63424
+Used time: 11.130771
+Epoch = 20, iter = 79, loss= 1.79446
+Epoch: 20
+Evaluating
+Accuracy: 0.98979
+Cor: 536, Pred TOT: 826, Gold TOT: 811
+Precision: 0.64891, Recall: 0.66091, F1: 0.65486
+Used time: 11.098494
+----Best F1 in valid 65.49 in Epoch 20
+Saving to entity_output...
+Epoch = 21, iter = 23, loss= 1.88729
+Epoch = 21, iter = 123, loss= 1.76288
+Epoch: 21
+Evaluating
+Accuracy: 0.99022
+Cor: 541, Pred TOT: 799, Gold TOT: 811
+Precision: 0.67710, Recall: 0.66708, F1: 0.67205
+Used time: 10.724228
+----Best F1 in valid 67.20 in Epoch 21
+Saving to entity_output...
+Epoch = 22, iter = 67, loss= 1.49122
+Epoch: 22
+Evaluating
+Accuracy: 0.99002
+Cor: 537, Pred TOT: 797, Gold TOT: 811
+Precision: 0.67378, Recall: 0.66215, F1: 0.66791
+Used time: 10.577338
+Epoch = 23, iter = 11, loss= 1.62998
+Epoch = 23, iter = 111, loss= 1.51591
+Epoch: 23
+Evaluating
+Accuracy: 0.99006
+Cor: 552, Pred TOT: 825, Gold TOT: 811
+Precision: 0.66909, Recall: 0.68064, F1: 0.67482
+Used time: 9.692854
+----Best F1 in valid 67.48 in Epoch 23
+Saving to entity_output...
+Epoch = 24, iter = 55, loss= 1.42031
+Epoch = 24, iter = 155, loss= 1.45222
+Epoch: 24
+Evaluating
+Accuracy: 0.99004
+Cor: 559, Pred TOT: 841, Gold TOT: 811
+Precision: 0.66468, Recall: 0.68927, F1: 0.67676
+Used time: 9.744415
+----Best F1 in valid 67.68 in Epoch 24
+Saving to entity_output...
+Epoch = 25, iter = 99, loss= 1.40847
+Epoch: 25
+Evaluating
+Accuracy: 0.99029
+Cor: 550, Pred TOT: 806, Gold TOT: 811
+Precision: 0.68238, Recall: 0.67818, F1: 0.68027
+Used time: 9.788366
+----Best F1 in valid 68.03 in Epoch 25
+Saving to entity_output...
+Epoch = 26, iter = 43, loss= 1.30631
+Epoch = 26, iter = 143, loss= 1.22908
+Epoch: 26
+Evaluating
+Accuracy: 0.99020
+Cor: 554, Pred TOT: 824, Gold TOT: 811
+Precision: 0.67233, Recall: 0.68311, F1: 0.67768
+Used time: 9.765388
+Epoch = 27, iter = 87, loss= 1.19923
+Epoch: 27
+Evaluating
+Accuracy: 0.99022
+Cor: 549, Pred TOT: 813, Gold TOT: 811
+Precision: 0.67528, Recall: 0.67694, F1: 0.67611
+Used time: 9.699002
+Epoch = 28, iter = 31, loss= 1.20450
+Epoch = 28, iter = 131, loss= 1.22877
+Epoch: 28
+Evaluating
+Accuracy: 0.99022
+Cor: 551, Pred TOT: 816, Gold TOT: 811
+Precision: 0.67525, Recall: 0.67941, F1: 0.67732
+Used time: 9.719264
+Epoch = 29, iter = 75, loss= 1.19170
+Epoch: 29
+Evaluating
+Accuracy: 0.99024
+Cor: 555, Pred TOT: 826, Gold TOT: 811
+Precision: 0.67191, Recall: 0.68434, F1: 0.67807
+Used time: 9.622554
+Loading BERT model from entity_output/
+Moving to cuda....
+ # CPUs = 1
+# Overlap: 0
+Extracted 275 samples from 50 documents, with 811 NER labels, 89.996 avg input length, 100 max length
+Max Length: 68, Max NER: 11
+Evaluating
+Accuracy: 0.99029
+Cor: 550, Pred TOT: 806, Gold TOT: 811
+Precision: 0.68238, Recall: 0.67818, F1: 0.68027
+Used time: 9.572406
+Total pred entites: 806
+Output Predictions to entity_output\ent_pred_dev.json...

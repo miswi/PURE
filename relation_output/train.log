@@ -1,0 +1,304 @@
+['E:/Code File/Pytorch/NLP/Paper code/Code Reconstr/PURE/run_relation.py']
+Namespace(add_new_tokens=True, bertadam=True, context_window=100, do_eval=False, do_lower_case=True, do_train=True, entity_output_dir='./entity_output/', entity_predictions_dev='ent_pred_dev.json', entity_predictions_test='ent_pred_test.json', eval_batch_size=12, eval_metric='f1', eval_per_epoch=10, eval_test=False, eval_with_gold=False, learning_rate=2e-05, max_seq_len=128, model='E:\\Code File\\Pre-train-Model\\torchVersion\\bert-base-uncased', negative_label='no_relation', no_cuda=False, num_train_epochs=30, output_dir='./relation_output', prediction_file='predictions.json', seed=0, task='scierc', train_batch_size=12, train_file='E:\\Code File\\Pytorch\\NLP\\Paper code\\Code Reconstr\\PURE\\processed_data\\json\\train.json', train_mode=False, warmup_proportion=0.1)
+device: cuda, n_gpu: 1
+# vocal after adding marker: 30562
+*** Example ***
+guid: J87-1003@0::(0,0)-(10,10)
+tokens [CLS] [unused1] english [unused2] is shown to be trans - context - free on the basis of [unused3] coordination ##s [unused4] of the respectively type that involve strictly syn ##ta ##ctic cross - serial agreement . the agreement in question involves number in nouns and reflex ##ive pronouns and is syn ##ta ##ctic rather than semantic in nature because grammatical number in english , like grammatical gender in languages such as french , is partly arbitrary . [SEP]
+input_ids: 101 2 2394 3 2003 3491 2000 2022 9099 1011 6123 1011 2489 2006 1996 3978 1997 4 12016 2015 5 1997 1996 4414 2828 2008 9125 9975 19962 2696 13306 2892 1011 7642 3820 1012 1996 3820 1999 3160 7336 2193 1999 19211 1998 22259 3512 26028 1998 2003 19962 2696 13306 2738 2084 21641 1999 3267 2138 24402 2193 1999 2394 1010 2066 24402 5907 1999 4155 2107 2004 2413 1010 2003 6576 15275 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: no_relation (id = 0)
+sub_idx, obj_idx: 1, 17
+*** Example ***
+guid: J87-1003@0::(0,0)-(17,20)
+tokens [CLS] [unused1] english [unused2] is shown to be trans - context - free on the basis of coordination ##s of the respectively type that involve [unused3] strictly syn ##ta ##ctic cross - serial agreement [unused4] . the agreement in question involves number in nouns and reflex ##ive pronouns and is syn ##ta ##ctic rather than semantic in nature because grammatical number in english , like grammatical gender in languages such as french , is partly arbitrary . [SEP]
+input_ids: 101 2 2394 3 2003 3491 2000 2022 9099 1011 6123 1011 2489 2006 1996 3978 1997 12016 2015 1997 1996 4414 2828 2008 9125 4 9975 19962 2696 13306 2892 1011 7642 3820 5 1012 1996 3820 1999 3160 7336 2193 1999 19211 1998 22259 3512 26028 1998 2003 19962 2696 13306 2738 2084 21641 1999 3267 2138 24402 2193 1999 2394 1010 2066 24402 5907 1999 4155 2107 2004 2413 1010 2003 6576 15275 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: no_relation (id = 0)
+sub_idx, obj_idx: 1, 25
+*** Example ***
+guid: J87-1003@0::(10,10)-(0,0)
+tokens [CLS] [unused7] english [unused8] is shown to be trans - context - free on the basis of [unused5] coordination ##s [unused6] of the respectively type that involve strictly syn ##ta ##ctic cross - serial agreement . the agreement in question involves number in nouns and reflex ##ive pronouns and is syn ##ta ##ctic rather than semantic in nature because grammatical number in english , like grammatical gender in languages such as french , is partly arbitrary . [SEP]
+input_ids: 101 8 2394 9 2003 3491 2000 2022 9099 1011 6123 1011 2489 2006 1996 3978 1997 6 12016 2015 7 1997 1996 4414 2828 2008 9125 9975 19962 2696 13306 2892 1011 7642 3820 1012 1996 3820 1999 3160 7336 2193 1999 19211 1998 22259 3512 26028 1998 2003 19962 2696 13306 2738 2084 21641 1999 3267 2138 24402 2193 1999 2394 1010 2066 24402 5907 1999 4155 2107 2004 2413 1010 2003 6576 15275 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: no_relation (id = 0)
+sub_idx, obj_idx: 17, 1
+*** Example ***
+guid: J87-1003@0::(10,10)-(17,20)
+tokens [CLS] english is shown to be trans - context - free on the basis of [unused5] coordination ##s [unused6] of the respectively type that involve [unused3] strictly syn ##ta ##ctic cross - serial agreement [unused4] . the agreement in question involves number in nouns and reflex ##ive pronouns and is syn ##ta ##ctic rather than semantic in nature because grammatical number in english , like grammatical gender in languages such as french , is partly arbitrary . [SEP]
+input_ids: 101 2394 2003 3491 2000 2022 9099 1011 6123 1011 2489 2006 1996 3978 1997 6 12016 2015 7 1997 1996 4414 2828 2008 9125 4 9975 19962 2696 13306 2892 1011 7642 3820 5 1012 1996 3820 1999 3160 7336 2193 1999 19211 1998 22259 3512 26028 1998 2003 19962 2696 13306 2738 2084 21641 1999 3267 2138 24402 2193 1999 2394 1010 2066 24402 5907 1999 4155 2107 2004 2413 1010 2003 6576 15275 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: no_relation (id = 0)
+sub_idx, obj_idx: 15, 25
+*** Example ***
+guid: J87-1003@0::(17,20)-(0,0)
+tokens [CLS] [unused7] english [unused8] is shown to be trans - context - free on the basis of coordination ##s of the respectively type that involve [unused5] strictly syn ##ta ##ctic cross - serial agreement [unused6] . the agreement in question involves number in nouns and reflex ##ive pronouns and is syn ##ta ##ctic rather than semantic in nature because grammatical number in english , like grammatical gender in languages such as french , is partly arbitrary . [SEP]
+input_ids: 101 8 2394 9 2003 3491 2000 2022 9099 1011 6123 1011 2489 2006 1996 3978 1997 12016 2015 1997 1996 4414 2828 2008 9125 6 9975 19962 2696 13306 2892 1011 7642 3820 7 1012 1996 3820 1999 3160 7336 2193 1999 19211 1998 22259 3512 26028 1998 2003 19962 2696 13306 2738 2084 21641 1999 3267 2138 24402 2193 1999 2394 1010 2066 24402 5907 1999 4155 2107 2004 2413 1010 2003 6576 15275 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: no_relation (id = 0)
+sub_idx, obj_idx: 25, 1
+*** Example ***
+guid: J87-1003@1::(29,29)-(31,32)
+tokens [CLS] english is shown to be trans - context - free on the basis of coordination ##s of the respectively type that involve strictly syn ##ta ##ctic cross - serial agreement . the agreement in question involves number in [unused5] nouns [unused6] and [unused3] reflex ##ive pronouns and is syn ##ta ##ctic rather than semantic in nature because grammatical number in english , like grammatical gender in languages such as french [unused4] , is partly arbitrary . the formal proof , which makes crucial use of the interchange le ##mma of ogden et al . , is so constructed as to be valid even if english is presumed to contain [SEP]
+input_ids: 101 2394 2003 3491 2000 2022 9099 1011 6123 1011 2489 2006 1996 3978 1997 12016 2015 1997 1996 4414 2828 2008 9125 9975 19962 2696 13306 2892 1011 7642 3820 1012 1996 3820 1999 3160 7336 2193 1999 6 19211 7 1998 4 22259 3512 26028 1998 2003 19962 2696 13306 2738 2084 21641 1999 3267 2138 24402 2193 1999 2394 1010 2066 24402 5907 1999 4155 2107 2004 2413 5 1010 2003 6576 15275 1012 1996 5337 6947 1010 2029 3084 10232 2224 1997 1996 8989 3393 14760 1997 23203 3802 2632 1012 1010 2003 2061 3833 2004 2000 2022 9398 2130 2065 2394 2003 14609 2000 5383 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: CONJUNCTION (id = 4)
+sub_idx, obj_idx: 39, 43
+*** Example ***
+guid: J87-1003@1::(48,49)-(51,51)
+tokens [CLS] english is shown to be trans - context - free on the basis of coordination ##s of the respectively type that involve strictly syn ##ta ##ctic cross - serial agreement . the agreement in question involves number in nouns and reflex ##ive pronouns and is syn ##ta ##ctic rather than semantic in nature because grammatical number in english , like [unused5] grammatical gender [unused6] in [unused7] languages such as french , is partly arbitrary . the formal proof , which makes crucial use of the interchange le ##mma of ogden [unused8] et al . , is so constructed as to be valid even if english is presumed to contain [SEP]
+input_ids: 101 2394 2003 3491 2000 2022 9099 1011 6123 1011 2489 2006 1996 3978 1997 12016 2015 1997 1996 4414 2828 2008 9125 9975 19962 2696 13306 2892 1011 7642 3820 1012 1996 3820 1999 3160 7336 2193 1999 19211 1998 22259 3512 26028 1998 2003 19962 2696 13306 2738 2084 21641 1999 3267 2138 24402 2193 1999 2394 1010 2066 6 24402 5907 7 1999 8 4155 2107 2004 2413 1010 2003 6576 15275 1012 1996 5337 6947 1010 2029 3084 10232 2224 1997 1996 8989 3393 14760 1997 23203 9 3802 2632 1012 1010 2003 2061 3833 2004 2000 2022 9398 2130 2065 2394 2003 14609 2000 5383 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: FEATURE-OF (id = 3)
+sub_idx, obj_idx: 61, 66
+*** Example ***
+guid: J87-1003@1::(54,54)-(51,51)
+tokens [CLS] english is shown to be trans - context - free on the basis of coordination ##s of the respectively type that involve strictly syn ##ta ##ctic cross - serial agreement . the agreement in question involves number in nouns and reflex ##ive pronouns and is syn ##ta ##ctic rather than semantic in nature because grammatical number in english , like grammatical gender in [unused7] languages such as [unused1] french [unused2] , is partly arbitrary . the formal proof , which makes crucial use of the interchange le ##mma of ogden [unused8] et al . , is so constructed as to be valid even if english is presumed to contain [SEP]
+input_ids: 101 2394 2003 3491 2000 2022 9099 1011 6123 1011 2489 2006 1996 3978 1997 12016 2015 1997 1996 4414 2828 2008 9125 9975 19962 2696 13306 2892 1011 7642 3820 1012 1996 3820 1999 3160 7336 2193 1999 19211 1998 22259 3512 26028 1998 2003 19962 2696 13306 2738 2084 21641 1999 3267 2138 24402 2193 1999 2394 1010 2066 24402 5907 1999 8 4155 2107 2004 2 2413 3 1010 2003 6576 15275 1012 1996 5337 6947 1010 2029 3084 10232 2224 1997 1996 8989 3393 14760 1997 23203 9 3802 2632 1012 1010 2003 2061 3833 2004 2000 2022 9398 2130 2065 2394 2003 14609 2000 5383 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: HYPONYM-OF (id = 6)
+sub_idx, obj_idx: 68, 64
+*** Example ***
+guid: CVPR_2003_18_abs@0::(6,6)-(10,12)
+tokens [CLS] in this paper , a novel [unused13] method [unused14] to learn the [unused3] intrinsic object structure [unused4] for robust visual tracking is proposed . the basic assumption is that the parameter ##ized object state lies on a low dimensional manifold and can be learned from training data . [SEP]
+input_ids: 101 1999 2023 3259 1010 1037 3117 14 4118 15 2000 4553 1996 4 23807 4874 3252 5 2005 15873 5107 9651 2003 3818 1012 1996 3937 11213 2003 2008 1996 16381 3550 4874 2110 3658 2006 1037 2659 8789 19726 1998 2064 2022 4342 2013 2731 2951 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: USED-FOR (id = 2)
+sub_idx, obj_idx: 7, 13
+*** Example ***
+guid: CVPR_2003_18_abs@0::(10,12)-(14,16)
+tokens [CLS] in this paper , a novel method to learn the [unused5] intrinsic object structure [unused6] for [unused17] robust visual tracking [unused18] is proposed . the basic assumption is that the parameter ##ized object state lies on a low dimensional manifold and can be learned from training data . [SEP]
+input_ids: 101 1999 2023 3259 1010 1037 3117 4118 2000 4553 1996 6 23807 4874 3252 7 2005 18 15873 5107 9651 19 2003 3818 1012 1996 3937 11213 2003 2008 1996 16381 3550 4874 2110 3658 2006 1037 2659 8789 19726 1998 2064 2022 4342 2013 2731 2951 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: USED-FOR (id = 2)
+sub_idx, obj_idx: 11, 17
+*** Example ***
+guid: CVPR_2003_18_abs@1::(32,34)-(26,28)
+tokens [CLS] in this paper , a novel method to learn the intrinsic object structure for robust visual tracking is proposed . the basic assumption is that the [unused3] parameter ##ized object state lies on a [unused5] low dimensional manifold [unused6] and can be learned from training data . based on this assumption , firstly [unused4] we derived the dimensional ##ity reduction and density estimation algorithm for un ##su ##per ##vis ##ed learning of object intrinsic representation , the obtained non - rigid part of object state reduces even to 2 dimensions . [SEP]
+input_ids: 101 1999 2023 3259 1010 1037 3117 4118 2000 4553 1996 23807 4874 3252 2005 15873 5107 9651 2003 3818 1012 1996 3937 11213 2003 2008 1996 4 16381 3550 4874 2110 3658 2006 1037 6 2659 8789 19726 7 1998 2064 2022 4342 2013 2731 2951 1012 2241 2006 2023 11213 1010 15847 5 2057 5173 1996 8789 3012 7312 1998 4304 24155 9896 2005 4895 6342 4842 11365 2098 4083 1997 4874 23807 6630 1010 1996 4663 2512 1011 11841 2112 1997 4874 2110 13416 2130 2000 1016 9646 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: FEATURE-OF (id = 3)
+sub_idx, obj_idx: 35, 27
+*** Example ***
+guid: CVPR_2003_18_abs@2::(52,57)-(59,64)
+tokens [CLS] the basic assumption is that the parameter ##ized object state lies on a low dimensional manifold and can be learned from training data . based on this assumption , firstly we derived the [unused13] dimensional ##ity reduction and density estimation algorithm [unused14] for [unused17] un ##su ##per ##vis ##ed learning of object intrinsic representation , the obtained non - rigid part of object state reduces even to 2 dimensions . secondly the dynamic ##al model is derived and trained based on this intrinsic representation . [SEP]
+input_ids: 101 1996 3937 11213 2003 2008 1996 16381 3550 4874 2110 3658 2006 1037 2659 8789 19726 1998 2064 2022 4342 2013 2731 2951 1012 2241 2006 2023 11213 1010 15847 2057 5173 1996 14 8789 3012 7312 1998 4304 24155 9896 15 2005 18 4895 6342 4842 11365 2098 4083 1997 4874 23807 6630 1010 1996 4663 2512 1011 11841 2112 1997 4874 2110 13416 2130 2000 1016 9646 1012 16378 1996 8790 2389 2944 2003 5173 1998 4738 2241 2006 2023 23807 6630 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: USED-FOR (id = 2)
+sub_idx, obj_idx: 34, 44
+*** Example ***
+guid: CVPR_2003_18_abs@3::(90,91)-(81,82)
+tokens [CLS] based on this assumption , firstly we derived the dimensional ##ity reduction and density estimation algorithm for un ##su ##per ##vis ##ed learning of object intrinsic representation , the obtained non - rigid part of object state reduces even to 2 dimensions . secondly the [unused15] dynamic ##al model is derived and trained based on this [unused13] intrinsic representation [unused14] . third ##ly the learned intrinsic object structure is integrated into a particle - filter style tracker . [SEP]
+input_ids: 101 2241 2006 2023 11213 1010 15847 2057 5173 1996 8789 3012 7312 1998 4304 24155 9896 2005 4895 6342 4842 11365 2098 4083 1997 4874 23807 6630 1010 1996 4663 2512 1011 11841 2112 1997 4874 2110 13416 2130 2000 1016 9646 1012 16378 1996 16 8790 2389 2944 2003 5173 1998 4738 2241 2006 2023 14 23807 6630 15 1012 2353 2135 1996 4342 23807 4874 3252 2003 6377 2046 1037 10811 1011 11307 2806 27080 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: USED-FOR (id = 2)
+sub_idx, obj_idx: 57, 46
+*** Example ***
+guid: CVPR_2003_18_abs@4::(96,98)-(103,105)
+tokens [CLS] secondly the dynamic ##al model is derived and trained based on this intrinsic representation . third ##ly the learned [unused5] intrinsic object structure [unused6] is integrated into a [unused15] particle - filter style tracker . we will show that this intrinsic object representation has some interesting properties and based on which the newly derived dynamic ##al model makes particle - filter style tracker more robust and reliable . [SEP]
+input_ids: 101 16378 1996 8790 2389 2944 2003 5173 1998 4738 2241 2006 2023 23807 6630 1012 2353 2135 1996 4342 6 23807 4874 3252 7 2003 6377 2046 1037 16 10811 1011 11307 2806 27080 1012 2057 2097 2265 2008 2023 23807 4874 6630 2038 2070 5875 5144 1998 2241 2006 2029 1996 4397 5173 8790 2389 2944 3084 10811 1011 11307 2806 27080 2062 15873 1998 10539 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: PART-OF (id = 1)
+sub_idx, obj_idx: 20, 29
+*** Example ***
+guid: CVPR_2003_18_abs@5::(126,127)-(129,131)
+tokens [CLS] third ##ly the learned intrinsic object structure is integrated into a particle - filter style tracker . we will show that this intrinsic object representation has some interesting properties and based on which the newly derived [unused13] dynamic ##al model [unused14] makes [unused15] particle - filter style tracker more robust and reliable . experiments show that the learned tracker performs much better than existing tracker ##s on the tracking of complex non - rigid motions such as fish twisting with self - o ##cc ##lusion and large inter - frame lip motion . [SEP]
+input_ids: 101 2353 2135 1996 4342 23807 4874 3252 2003 6377 2046 1037 10811 1011 11307 2806 27080 1012 2057 2097 2265 2008 2023 23807 4874 6630 2038 2070 5875 5144 1998 2241 2006 2029 1996 4397 5173 14 8790 2389 2944 15 3084 16 10811 1011 11307 2806 27080 2062 15873 1998 10539 1012 7885 2265 2008 1996 4342 27080 10438 2172 2488 2084 4493 27080 2015 2006 1996 9651 1997 3375 2512 1011 11841 15323 2107 2004 3869 12814 2007 2969 1011 1051 9468 24117 1998 2312 6970 1011 4853 5423 4367 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: USED-FOR (id = 2)
+sub_idx, obj_idx: 37, 43
+*** Example ***
+guid: CVPR_2003_18_abs@6::(142,142)-(148,148)
+tokens [CLS] we will show that this intrinsic object representation has some interesting properties and based on which the newly derived dynamic ##al model makes particle - filter style tracker more robust and reliable . experiments show that the learned [unused9] tracker [unused10] performs much better than existing [unused11] tracker ##s on the tracking of complex non - rigid motions such as fish twisting with self - o ##cc ##lusion and large inter - frame lip motion . the proposed method also has the potential to solve other type of tracking problems . [SEP]
+input_ids: 101 2057 2097 2265 2008 2023 23807 4874 6630 2038 2070 5875 5144 1998 2241 2006 2029 1996 4397 5173 8790 2389 2944 3084 10811 1011 11307 2806 27080 2062 15873 1998 10539 1012 7885 2265 2008 1996 4342 10 27080 11 10438 2172 2488 2084 4493 12 27080 2015 2006 1996 9651 1997 3375 2512 1011 11841 15323 2107 2004 3869 12814 2007 2969 1011 1051 9468 24117 1998 2312 6970 1011 4853 5423 4367 1012 1996 3818 4118 2036 2038 1996 4022 2000 9611 2060 2828 1997 9651 3471 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: COMPARE (id = 7)
+sub_idx, obj_idx: 39, 47
+*** Example ***
+guid: CVPR_2003_18_abs@6::(142,142)-(151,155)
+tokens [CLS] we will show that this intrinsic object representation has some interesting properties and based on which the newly derived dynamic ##al model makes particle - filter style tracker more robust and reliable . experiments show that the learned [unused9] tracker [unused10] performs much better than existing tracker ##s on the [unused17] tracking of complex non - rigid motions such as fish twisting with self - o ##cc ##lusion and large inter - frame lip motion . the proposed method also has the potential to solve other type of tracking problems . [SEP]
+input_ids: 101 2057 2097 2265 2008 2023 23807 4874 6630 2038 2070 5875 5144 1998 2241 2006 2029 1996 4397 5173 8790 2389 2944 3084 10811 1011 11307 2806 27080 2062 15873 1998 10539 1012 7885 2265 2008 1996 4342 10 27080 11 10438 2172 2488 2084 4493 27080 2015 2006 1996 18 9651 1997 3375 2512 1011 11841 15323 2107 2004 3869 12814 2007 2969 1011 1051 9468 24117 1998 2312 6970 1011 4853 5423 4367 1012 1996 3818 4118 2036 2038 1996 4022 2000 9611 2060 2828 1997 9651 3471 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: USED-FOR (id = 2)
+sub_idx, obj_idx: 39, 51
+*** Example ***
+guid: CVPR_2003_18_abs@6::(148,148)-(151,155)
+tokens [CLS] we will show that this intrinsic object representation has some interesting properties and based on which the newly derived dynamic ##al model makes particle - filter style tracker more robust and reliable . experiments show that the learned tracker performs much better than existing [unused9] tracker ##s [unused10] on the [unused17] tracking of complex non - rigid motions such as fish twisting with self - o ##cc ##lusion and large inter - frame lip motion . the proposed method also has the potential to solve other type of tracking problems . [SEP]
+input_ids: 101 2057 2097 2265 2008 2023 23807 4874 6630 2038 2070 5875 5144 1998 2241 2006 2029 1996 4397 5173 8790 2389 2944 3084 10811 1011 11307 2806 27080 2062 15873 1998 10539 1012 7885 2265 2008 1996 4342 27080 10438 2172 2488 2084 4493 10 27080 2015 11 2006 1996 18 9651 1997 3375 2512 1011 11841 15323 2107 2004 3869 12814 2007 2969 1011 1051 9468 24117 1998 2312 6970 1011 4853 5423 4367 1012 1996 3818 4118 2036 2038 1996 4022 2000 9611 2060 2828 1997 9651 3471 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: USED-FOR (id = 2)
+sub_idx, obj_idx: 45, 51
+*** Example ***
+guid: CVPR_2003_18_abs@6::(158,159)-(153,155)
+tokens [CLS] we will show that this intrinsic object representation has some interesting properties and based on which the newly derived dynamic ##al model makes particle - filter style tracker more robust and reliable . experiments show that the learned tracker performs much better than existing tracker ##s on the tracking of [unused3] complex non - rigid motions such as [unused5] fish twisting [unused6] with self - o ##cc ##lusion and large inter - frame lip motion . the proposed method also has the potential to solve other type of tracking problems . [SEP]
+input_ids: 101 2057 2097 2265 2008 2023 23807 4874 6630 2038 2070 5875 5144 1998 2241 2006 2029 1996 4397 5173 8790 2389 2944 3084 10811 1011 11307 2806 27080 2062 15873 1998 10539 1012 7885 2265 2008 1996 4342 27080 10438 2172 2488 2084 4493 27080 2015 2006 1996 9651 1997 4 3375 2512 1011 11841 15323 2107 2004 6 3869 12814 7 2007 2969 1011 1051 9468 24117 1998 2312 6970 1011 4853 5423 4367 1012 1996 3818 4118 2036 2038 1996 4022 2000 9611 2060 2828 1997 9651 3471 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: HYPONYM-OF (id = 6)
+sub_idx, obj_idx: 59, 51
+*** Example ***
+guid: CVPR_2003_18_abs@6::(161,161)-(158,159)
+tokens [CLS] we will show that this intrinsic object representation has some interesting properties and based on which the newly derived dynamic ##al model makes particle - filter style tracker more robust and reliable . experiments show that the learned tracker performs much better than existing tracker ##s on the tracking of complex non - rigid motions such as [unused3] fish twisting with [unused5] self - o ##cc ##lusion [unused6] and large inter - frame lip motion . the proposed method also has the potential to solve other type of tracking problems . [SEP]
+input_ids: 101 2057 2097 2265 2008 2023 23807 4874 6630 2038 2070 5875 5144 1998 2241 2006 2029 1996 4397 5173 8790 2389 2944 3084 10811 1011 11307 2806 27080 2062 15873 1998 10539 1012 7885 2265 2008 1996 4342 27080 10438 2172 2488 2084 4493 27080 2015 2006 1996 9651 1997 3375 2512 1011 11841 15323 2107 2004 4 3869 12814 2007 6 2969 1011 1051 9468 24117 7 1998 2312 6970 1011 4853 5423 4367 1012 1996 3818 4118 2036 2038 1996 4022 2000 9611 2060 2828 1997 9651 3471 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+label: FEATURE-OF (id = 3)
+sub_idx, obj_idx: 62, 58
+Average #tokens: 91.33
+Max #tokens: 1540853
+16015 (94.92 %) examples can fit max_seq_len = 128
+**** Training ****
+ Num examples = 16872
+ Batch size = 12
+ Num steps = 30
+Start epoch #0 (lr = 2e-05)...
+Epoch: 0, Step: 140 / 1406, Used Time = 207.26s, loss = 2.983846
+Epoch: 0, Step: 280 / 1406, Used Time = 335.96s, loss = 2.050680
+Epoch: 0, Step: 420 / 1406, Used Time = 464.27s, loss = 1.639917
+Epoch: 0, Step: 560 / 1406, Used Time = 592.33s, loss = 1.423237
+Epoch: 0, Step: 700 / 1406, Used Time = 720.58s, loss = 1.304114
+Epoch: 0, Step: 840 / 1406, Used Time = 849.15s, loss = 1.213797
+Epoch: 0, Step: 980 / 1406, Used Time = 976.89s, loss = 1.141134
+Epoch: 0, Step: 1120 / 1406, Used Time = 1104.63s, loss = 1.088593
+Epoch: 0, Step: 1260 / 1406, Used Time = 1236.71s, loss = 1.041437
+Epoch: 0, Step: 1400 / 1406, Used Time = 1366.95s, loss = 0.999598
+Start epoch #1 (lr = 2e-05)...
+Epoch: 1, Step: 140 / 1406, Used Time = 1502.86s, loss = 0.963247
+Epoch: 1, Step: 280 / 1406, Used Time = 1633.30s, loss = 0.928793
+Epoch: 1, Step: 420 / 1406, Used Time = 1762.88s, loss = 0.899037
+Epoch: 1, Step: 560 / 1406, Used Time = 1892.80s, loss = 0.869131
+Epoch: 1, Step: 700 / 1406, Used Time = 2024.18s, loss = 0.846449
+Epoch: 1, Step: 840 / 1406, Used Time = 2156.32s, loss = 0.822005
+Epoch: 1, Step: 980 / 1406, Used Time = 2289.13s, loss = 0.798397
+Epoch: 1, Step: 1120 / 1406, Used Time = 2419.09s, loss = 0.780921
+Epoch: 1, Step: 1260 / 1406, Used Time = 2548.26s, loss = 0.760623
+Epoch: 1, Step: 1400 / 1406, Used Time = 2677.75s, loss = 0.742331
+Start epoch #2 (lr = 2e-05)...
+Epoch: 2, Step: 140 / 1406, Used Time = 2813.20s, loss = 0.725915
+Epoch: 2, Step: 280 / 1406, Used Time = 2943.81s, loss = 0.709244
+Epoch: 2, Step: 420 / 1406, Used Time = 3073.28s, loss = 0.693432
+Epoch: 2, Step: 560 / 1406, Used Time = 3203.01s, loss = 0.678886
+Epoch: 2, Step: 700 / 1406, Used Time = 3333.13s, loss = 0.666053
+Epoch: 2, Step: 840 / 1406, Used Time = 3463.88s, loss = 0.653147
+Epoch: 2, Step: 980 / 1406, Used Time = 3592.72s, loss = 0.639812
+Epoch: 2, Step: 1120 / 1406, Used Time = 3720.79s, loss = 0.629159
+Epoch: 2, Step: 1260 / 1406, Used Time = 3848.83s, loss = 0.616797
+Epoch: 2, Step: 1400 / 1406, Used Time = 3976.82s, loss = 0.605421
+Start epoch #3 (lr = 2e-05)...
+Epoch: 3, Step: 140 / 1406, Used Time = 4110.38s, loss = 0.594744
+Epoch: 3, Step: 280 / 1406, Used Time = 4238.43s, loss = 0.583185
+Epoch: 3, Step: 420 / 1406, Used Time = 4366.57s, loss = 0.571679
+Epoch: 3, Step: 560 / 1406, Used Time = 4496.11s, loss = 0.560880
+Epoch: 3, Step: 700 / 1406, Used Time = 4625.09s, loss = 0.550964
+Epoch: 3, Step: 840 / 1406, Used Time = 4754.48s, loss = 0.541317
+Epoch: 3, Step: 980 / 1406, Used Time = 4883.53s, loss = 0.531673
+Epoch: 3, Step: 1120 / 1406, Used Time = 5013.41s, loss = 0.523585
+Epoch: 3, Step: 1260 / 1406, Used Time = 5143.27s, loss = 0.514601
+Epoch: 3, Step: 1400 / 1406, Used Time = 5273.73s, loss = 0.506224
+Start epoch #4 (lr = 2e-05)...
+Epoch: 4, Step: 140 / 1406, Used Time = 5408.83s, loss = 0.497568
+Epoch: 4, Step: 280 / 1406, Used Time = 5538.29s, loss = 0.488606
+Epoch: 4, Step: 420 / 1406, Used Time = 5667.20s, loss = 0.480458
+Epoch: 4, Step: 560 / 1406, Used Time = 5796.51s, loss = 0.472456
+Epoch: 4, Step: 700 / 1406, Used Time = 5925.81s, loss = 0.465057
+Epoch: 4, Step: 840 / 1406, Used Time = 6055.64s, loss = 0.457535
+Epoch: 4, Step: 980 / 1406, Used Time = 6184.80s, loss = 0.449975
+Epoch: 4, Step: 1120 / 1406, Used Time = 6312.85s, loss = 0.442944
+Epoch: 4, Step: 1260 / 1406, Used Time = 6440.87s, loss = 0.436090
+Epoch: 4, Step: 1400 / 1406, Used Time = 6569.04s, loss = 0.429464
+Start epoch #5 (lr = 2e-05)...
+Epoch: 5, Step: 140 / 1406, Used Time = 6702.74s, loss = 0.422970
+Epoch: 5, Step: 280 / 1406, Used Time = 6830.94s, loss = 0.416371
+Epoch: 5, Step: 420 / 1406, Used Time = 6959.04s, loss = 0.409960
+Epoch: 5, Step: 560 / 1406, Used Time = 7087.16s, loss = 0.404070
+Epoch: 5, Step: 700 / 1406, Used Time = 7215.24s, loss = 0.398201
+Epoch: 5, Step: 840 / 1406, Used Time = 7343.26s, loss = 0.392478
+Epoch: 5, Step: 980 / 1406, Used Time = 7471.30s, loss = 0.387025
+Epoch: 5, Step: 1120 / 1406, Used Time = 7599.35s, loss = 0.381726
+Epoch: 5, Step: 1260 / 1406, Used Time = 7727.36s, loss = 0.376626
+Epoch: 5, Step: 1400 / 1406, Used Time = 7855.39s, loss = 0.371489
+Start epoch #6 (lr = 2e-05)...
+Epoch: 6, Step: 140 / 1406, Used Time = 7988.88s, loss = 0.366449
+Epoch: 6, Step: 280 / 1406, Used Time = 8116.90s, loss = 0.361468
+Epoch: 6, Step: 420 / 1406, Used Time = 8244.93s, loss = 0.356658
+Epoch: 6, Step: 560 / 1406, Used Time = 8372.92s, loss = 0.352072
+Epoch: 6, Step: 700 / 1406, Used Time = 8500.97s, loss = 0.347633
+Epoch: 6, Step: 840 / 1406, Used Time = 8629.03s, loss = 0.342989
+Epoch: 6, Step: 980 / 1406, Used Time = 8757.07s, loss = 0.338508
+Epoch: 6, Step: 1120 / 1406, Used Time = 8885.13s, loss = 0.334503
+Epoch: 6, Step: 1260 / 1406, Used Time = 9013.21s, loss = 0.330550
+Epoch: 6, Step: 1400 / 1406, Used Time = 9141.25s, loss = 0.326529
+Start epoch #7 (lr = 2e-05)...
+Epoch: 7, Step: 140 / 1406, Used Time = 9274.78s, loss = 0.322580
+Epoch: 7, Step: 280 / 1406, Used Time = 9402.83s, loss = 0.318568
+Epoch: 7, Step: 420 / 1406, Used Time = 9530.86s, loss = 0.314655
+Epoch: 7, Step: 560 / 1406, Used Time = 9658.90s, loss = 0.310809
+Epoch: 7, Step: 700 / 1406, Used Time = 9786.96s, loss = 0.307378
+Epoch: 7, Step: 840 / 1406, Used Time = 9915.00s, loss = 0.303855
+Epoch: 7, Step: 980 / 1406, Used Time = 10043.11s, loss = 0.300476
+Epoch: 7, Step: 1120 / 1406, Used Time = 10171.26s, loss = 0.297152
+Epoch: 7, Step: 1260 / 1406, Used Time = 10299.41s, loss = 0.293884
+Epoch: 7, Step: 1400 / 1406, Used Time = 10427.57s, loss = 0.290687
+Start epoch #8 (lr = 2e-05)...
+Epoch: 8, Step: 140 / 1406, Used Time = 10561.20s, loss = 0.287653
+Epoch: 8, Step: 280 / 1406, Used Time = 10689.31s, loss = 0.284556
+Epoch: 8, Step: 420 / 1406, Used Time = 10817.43s, loss = 0.281374
+Epoch: 8, Step: 560 / 1406, Used Time = 10945.63s, loss = 0.278413
+Epoch: 8, Step: 700 / 1406, Used Time = 11073.76s, loss = 0.275554
+Epoch: 8, Step: 840 / 1406, Used Time = 11201.89s, loss = 0.272755
+Epoch: 8, Step: 980 / 1406, Used Time = 11330.00s, loss = 0.269956
+Epoch: 8, Step: 1120 / 1406, Used Time = 11458.26s, loss = 0.267201
+Epoch: 8, Step: 1260 / 1406, Used Time = 11586.49s, loss = 0.264709
+Epoch: 8, Step: 1400 / 1406, Used Time = 11714.69s, loss = 0.262005
+Start epoch #9 (lr = 2e-05)...
+Epoch: 9, Step: 140 / 1406, Used Time = 11848.43s, loss = 0.259457
+Epoch: 9, Step: 280 / 1406, Used Time = 11976.65s, loss = 0.257012
+Epoch: 9, Step: 420 / 1406, Used Time = 12104.81s, loss = 0.254509
+Epoch: 9, Step: 560 / 1406, Used Time = 12233.11s, loss = 0.252050
+Epoch: 9, Step: 700 / 1406, Used Time = 12360.98s, loss = 0.249720
+Epoch: 9, Step: 840 / 1406, Used Time = 12492.31s, loss = 0.247534
+Epoch: 9, Step: 980 / 1406, Used Time = 12624.82s, loss = 0.245179
+Epoch: 9, Step: 1120 / 1406, Used Time = 12758.75s, loss = 0.242919
+Epoch: 9, Step: 1260 / 1406, Used Time = 12896.43s, loss = 0.240719
+Epoch: 9, Step: 1400 / 1406, Used Time = 13029.32s, loss = 0.238555
+Start epoch #10 (lr = 2e-05)...
+Epoch: 10, Step: 140 / 1406, Used Time = 13167.68s, loss = 0.236425
+Epoch: 10, Step: 280 / 1406, Used Time = 13301.43s, loss = 0.234480
+Epoch: 10, Step: 420 / 1406, Used Time = 13435.08s, loss = 0.232450
+Epoch: 10, Step: 560 / 1406, Used Time = 13567.26s, loss = 0.230382
+Epoch: 10, Step: 700 / 1406, Used Time = 13701.00s, loss = 0.228421
+Epoch: 10, Step: 840 / 1406, Used Time = 13834.30s, loss = 0.226418
+Epoch: 10, Step: 980 / 1406, Used Time = 13967.07s, loss = 0.224542
+Epoch: 10, Step: 1120 / 1406, Used Time = 14100.51s, loss = 0.222722
+Epoch: 10, Step: 1260 / 1406, Used Time = 14232.96s, loss = 0.220934
+Epoch: 10, Step: 1400 / 1406, Used Time = 14363.90s, loss = 0.219120
+Start epoch #11 (lr = 2e-05)...
+Epoch: 11, Step: 140 / 1406, Used Time = 14498.83s, loss = 0.217311
+Epoch: 11, Step: 280 / 1406, Used Time = 14630.52s, loss = 0.215537
+Epoch: 11, Step: 420 / 1406, Used Time = 14760.54s, loss = 0.213825
+Epoch: 11, Step: 560 / 1406, Used Time = 14890.06s, loss = 0.212067
+Epoch: 11, Step: 700 / 1406, Used Time = 15024.97s, loss = 0.210389
+Epoch: 11, Step: 840 / 1406, Used Time = 15156.22s, loss = 0.208661
+Epoch: 11, Step: 980 / 1406, Used Time = 15286.40s, loss = 0.207080
+Epoch: 11, Step: 1120 / 1406, Used Time = 15417.87s, loss = 0.205485
+Epoch: 11, Step: 1260 / 1406, Used Time = 15549.94s, loss = 0.203868
+Epoch: 11, Step: 1400 / 1406, Used Time = 15683.19s, loss = 0.202292
+Start epoch #12 (lr = 2e-05)...
